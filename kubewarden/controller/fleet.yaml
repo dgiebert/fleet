@@ -4,3 +4,6 @@ helm:
   chart: kubewarden-controller
   version: 1.2.2
   repo: https://charts.kubewarden.io
+
+dependsOn:
+  - name: dgiebert-fleet-cert-manager
