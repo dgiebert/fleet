@@ -1,0 +1,4 @@
+defaultNamespace: longhorn-system
+# Custom helm options
+helm:
+  releaseName: longhorn-network-policies
