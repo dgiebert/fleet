@@ -4,3 +4,6 @@ helm:
   chart: kubewarden-defaults
   version: 1.2.4
   repo: https://charts.kubewarden.io
+
+dependsOn:
+  - name: dgiebert-kubewarden-crds
