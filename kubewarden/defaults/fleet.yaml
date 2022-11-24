@@ -6,4 +6,4 @@ helm:
   repo: https://charts.kubewarden.io
 
 dependsOn:
-  - name: dgiebert-kubewarden-crds
+  - name: dgiebert-fleet-kubewarden-crds
