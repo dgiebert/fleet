@@ -12,6 +12,14 @@ helm:
       enabled: true
       # Wait for: https://github.com/rancher/fleet/pull/671
       # host: global.fleet.clusterLabels.management.cattle.io.cluster-display-name
+# Fix for sslip.io
+diff:
+  comparePatches:
+  - apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: longhorn-ingress
+    operations:
+    - {"op": "remove", "path": "/spec/rules/0/host"}
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd

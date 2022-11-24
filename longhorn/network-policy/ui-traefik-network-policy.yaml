@@ -16,4 +16,5 @@ spec:
           kubernetes.io/metadata.name: kube-system
       podSelector:
         matchLabels:
-          svccontroller.k3s.cattle.io/svcname: traefik
+          app.kubernetes.io/name: traefik
+          app.kubernetes.io/instance: traefik
