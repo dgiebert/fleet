@@ -1,0 +1,12 @@
+
+defaultNamespace: longhorn-system
+
+# Custom helm options
+helm:
+  releaseName: longhorn
+  chart: longhorn
+  repo: https://charts.rancher.io
+  version: 100.2.2+up1.3.2
+
+dependsOn:
+  - name: dgiebert-fleet-longhorn-crd
