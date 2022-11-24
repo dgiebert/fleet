@@ -32,4 +32,4 @@ helm:
         - security-scan
         - tigera-operator
 dependsOn:
-  - name: dgiebert-fleet-kubewarden-crds
+  - name: dgiebert-fleet-kubewarden-controller
