@@ -1,0 +1,6 @@
+defaultNamespace: kubewarden
+helm:
+  releaseName: kubewarden-defaults
+  chart: kubewarden-defaults
+  version: 1.2.4
+  repo: https://charts.kubewarden.io
