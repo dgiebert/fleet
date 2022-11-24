@@ -7,6 +7,11 @@ helm:
   chart: longhorn
   repo: https://charts.rancher.io
   version: 100.2.2+up1.3.2
+  values:
+    ingress:
+      enabled: true
+      # Wait for: https://github.com/rancher/fleet/pull/671
+      # host: global.fleet.clusterLabels.management.cattle.io.cluster-display-name
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
