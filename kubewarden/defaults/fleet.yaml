@@ -4,6 +4,10 @@ helm:
   chart: kubewarden-defaults
   version: 1.2.4
   repo: https://charts.kubewarden.io
+  values:
+    recommendedPolicies:
+      enabled: true
+      defaultPolicyMode: "protect"
 
 dependsOn:
   - name: dgiebert-fleet-kubewarden-crds
