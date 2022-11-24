@@ -19,7 +19,7 @@ diff:
     kind: Ingress
     name: longhorn-ingress
     operations:
-    - {"op": "remove", "path": "/spec/rules/0/host"}
+    - {"op": "remove", "path": "/spec/rules"}
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
