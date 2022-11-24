@@ -18,8 +18,9 @@ diff:
   - apiVersion: networking.k8s.io/v1
     kind: Ingress
     name: longhorn-ingress
+    namespace: longhorn-system
     operations:
-    - {"op": "remove", "path": "/spec/rules"}
+    - {"op": "remove", "path": "/spec/rules/0"}
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
