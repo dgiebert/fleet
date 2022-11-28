@@ -8,6 +8,8 @@ helm:
   values:
     minio:
       enabled: true
+dependsOn:
+  - name: dgiebert-fleet-rancher-monitoring-app
 
 # Patches needed for Fleet
 diff:

@@ -8,6 +8,29 @@ helm:
     recommendedPolicies:
       enabled: true
       defaultPolicyMode: "protect"
-
+      skipNamespaces:
+        - calico-system
+        - cattle-alerting
+        - cattle-fleet-local-system
+        - cattle-fleet-system
+        - cattle-global-data
+        - cattle-global-nt
+        - cattle-impersonation-system
+        - cattle-istio
+        - cattle-logging
+        - cattle-monitoring-system
+        - cattle-pipeline
+        - cattle-prometheus
+        - cattle-system
+        - cattle-neuvector-system
+        - cert-manager
+        - ingress-nginx
+        - kube-node-lease
+        - kube-public
+        - kube-system
+        - longhorn-system
+        - rancher-operator-system
+        - security-scan
+        - tigera-operator
 dependsOn:
   - name: dgiebert-fleet-kubewarden-controller
