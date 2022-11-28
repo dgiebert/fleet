@@ -2,7 +2,7 @@ defaultNamespace: kubewarden
 helm:
   releaseName: kubewarden-defaults
   chart: kubewarden-defaults
-  version: 1.2.4
+  version: 1.2.6
   repo: https://charts.kubewarden.io
   values:
     recommendedPolicies:
