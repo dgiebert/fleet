@@ -18,6 +18,7 @@ helm:
         - cattle-impersonation-system
         - cattle-istio
         - cattle-logging
+        - cattle-logging-system
         - cattle-monitoring-system
         - cattle-pipeline
         - cattle-prometheus
@@ -29,6 +30,8 @@ helm:
         - kube-public
         - kube-system
         - longhorn-system
+        - loki
+        - mimir
         - rancher-operator-system
         - security-scan
         - tigera-operator
