@@ -1,0 +1,20 @@
+defaultNamespace: loki
+# Custom helm options
+helm:
+  releaseName: loki
+  chart: loki
+  repo: https://grafana.github.io/helm-charts
+  version: 3.3.4
+  values:
+    minio:
+      enabled: true
+
+# Patches needed for Fleet
+diff:
+  comparePatches:
+  - apiVersion: apps/v1
+    kind: StatefulSet
+    name: loki-read
+    namespace: loki
+    operations:
+    - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy"}
