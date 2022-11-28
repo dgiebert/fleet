@@ -1,3 +1,6 @@
+# Fleet Repo
+
+```yaml
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
@@ -6,3 +9,4 @@ metadata:
 spec:
   branch: main
   repo: https://github.com/dgiebert/fleet.git
+```
