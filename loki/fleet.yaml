@@ -20,3 +20,17 @@ diff:
     namespace: loki
     operations:
     - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy"}
+
+targetCustomizations:
+- name: init
+  helm:
+    values:
+      write:
+        replicas: 1
+      read:
+        replicas: 1
+      query_scheduler:
+        replicas: 1
+  clusterSelector:
+    matchLabels:
+      env: develop
