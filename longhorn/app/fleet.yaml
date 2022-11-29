@@ -24,3 +24,18 @@ diff:
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
+
+
+targetCustomizations:
+- name: init
+  helm:
+    values:
+      csi:
+        attacherReplicaCount: 1
+        provisionerReplicaCount: 1
+        resizerReplicaCount: 1
+        snapshotterReplicaCount: 1
+  clusterSelector:
+    matchLabels:
+      env: develop
+
