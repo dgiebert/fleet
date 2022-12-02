@@ -11,6 +11,9 @@ helm:
     monitoring:
       selfMonitoring:
         enabled: false
+        # Bug in the chart
+        lokiCanary:
+          enabled: false
 
 dependsOn:
   - name: dgiebert-fleet-rancher-monitoring-app
