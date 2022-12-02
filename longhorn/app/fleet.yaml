@@ -37,5 +37,5 @@ targetCustomizations:
         snapshotterReplicaCount: 1
   clusterSelector:
     matchLabels:
-      env: develop
+      environment: staging
 

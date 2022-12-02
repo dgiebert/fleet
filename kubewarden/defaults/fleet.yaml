@@ -35,5 +35,6 @@ helm:
         - rancher-operator-system
         - security-scan
         - tigera-operator
+        - cert-manager
 dependsOn:
   - name: dgiebert-fleet-kubewarden-controller

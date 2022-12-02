@@ -19,4 +19,4 @@ targetCustomizations:
         replicas: 1
   clusterSelector:
     matchLabels:
-      env: develop
+      environment: staging
