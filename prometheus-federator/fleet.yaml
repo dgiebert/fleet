@@ -1,0 +1,12 @@
+defaultNamespace: cattle-monitoring-system
+# Custom helm options
+helm:
+  releaseName: prometheus-federator
+  chart: prometheus-federator
+  repo: https://charts.rancher.io
+  version: 1.0.0+up0.1.1
+  valuesFrom:
+    secretKeyRef:
+      name: fleet-cluster-config
+      namespace: kube-system
+      key: values.yaml
