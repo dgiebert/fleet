@@ -8,5 +8,5 @@ helm:
   valuesFrom:
   - configMapKeyRef:
       name: fleet-cluster-config
-      namespace: fleet-default
+      namespace: kube-system
       key: values.yaml
