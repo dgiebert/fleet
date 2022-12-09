@@ -5,3 +5,17 @@ helm:
   chart: "mimir-distributed"
   repo: "https://grafana.github.io/helm-charts/"
   version: "3.3.0"
+
+targetCustomizations:
+- name: init
+  helm:
+    values:
+      ingester:
+        replicas: 1
+      querier:
+        replicas: 1
+      query_scheduler:
+        replicas: 1
+  clusterSelector:
+    matchLabels:
+      environment: staging
