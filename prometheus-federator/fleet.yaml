@@ -8,5 +8,5 @@ helm:
   valuesFrom:
   - configMapKeyRef:
       name: fleet-cluster-config
-      namespace: kube-system
+      namespace: cattle-monitoring-system
       key: values.yaml
