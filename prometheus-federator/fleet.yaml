@@ -7,6 +7,6 @@ helm:
   version: 1.0.0+up0.1.1
   valuesFrom:
   - configMapKeyRef:
-      name: fleet-cluster-config
+      name: prometheus-federator-config
       namespace: cattle-monitoring-system
       key: values.yaml
