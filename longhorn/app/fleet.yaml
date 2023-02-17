@@ -61,9 +61,6 @@ diff:
     - {"op": "remove", "path": "/status/acceptedNames/plural"}
     - {"op": "remove", "path": "/status/conditions"}
     - {"op": "remove", "path": "/status/storedVersions"}
-dependsOn:
-  - name: dgiebert-fleet-longhorn-crd
-
 
 targetCustomizations:
 - name: init
