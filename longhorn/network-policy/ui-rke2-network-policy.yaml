@@ -17,8 +17,8 @@ spec:
       podSelector:
         matchLabels:
           app.kubernetes.io/component: controller
-          app.kubernetes.io/instance: ingress-nginx
-          app.kubernetes.io/name: ingress-nginx
+          app.kubernetes.io/instance: rke2-ingress-nginx
+          app.kubernetes.io/name: rke2-ingress-nginx
     ports:
       - port: 8000
         protocol: TCP
