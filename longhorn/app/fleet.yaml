@@ -4,14 +4,19 @@ defaultNamespace: longhorn-system
 # Custom helm options
 helm:
   releaseName: longhorn
-  chart: longhorn
-  repo: https://charts.rancher.io
-  version: 100.2.2+up1.3.2
+  chart: https://raw.githubusercontent.com/dgiebert/fleet/develop/longhorn/longhorn-1.4.0.tgz
+  #repo: https://charts.rancher.io
+  #version: 100.2.2+up1.3.2
   values:
     ingress:
       enabled: true
       # Wait for: https://github.com/rancher/fleet/pull/671
       # host: global.fleet.clusterLabels.management.cattle.io.cluster-display-name
+    networkPolicy:
+      enabled: true
+      type: "k3s"
+      # Wait for: https://github.com/rancher/fleet/pull/671
+      # type: global.fleet.clusterLabels.provider.cattle.io
 # Fix for sslip.io
 diff:
   comparePatches:
