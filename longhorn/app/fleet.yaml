@@ -12,9 +12,8 @@ helm:
       enabled: true
       # Wait for: https://github.com/rancher/fleet/pull/671
       # host: global.fleet.clusterLabels.management.cattle.io.cluster-display-name
-    networkPolicy:
+    networkPolicies:
       enabled: true
-      type: "k3s"
       # Wait for: https://github.com/rancher/fleet/pull/671
       # type: global.fleet.clusterLabels.provider.cattle.io
 # Fix for sslip.io
