@@ -4,18 +4,18 @@ helm:
   releaseName: rancher-monitoring
   chart: rancher-monitoring
   repo: https://charts.rancher.io
-  version: 101.0.0+up19.0.3
-  values:
-    # Connect Grafana to Mimir
-    grafana:
-      sidecar:
-        datasources:
-          url: http://mimir-nginx.mimir.svc:80/prometheus
-    prometheus:
-      prometheusSpec:
-        ignoreNamespaceSelectors: true # Use this to limit ServiceMonitors to deployed namespace
-        remoteWrite:
-          - url: http://mimir-nginx.mimir.svc:80/api/v1/push
+  version: 102.0.0+up40.1.2
+  # values:
+  #   # Connect Grafana to Mimir
+  #   grafana:
+  #     sidecar:
+  #       datasources:
+  #         url: http://mimir-nginx.mimir.svc:80/prometheus
+  #   prometheus:
+  #     prometheusSpec:
+  #       ignoreNamespaceSelectors: true # Use this to limit ServiceMonitors to deployed namespace
+  #       remoteWrite:
+  #         - url: http://mimir-nginx.mimir.svc:80/api/v1/push
 
 dependsOn:
   - name: dgiebert-fleet-rancher-monitoring-crd
