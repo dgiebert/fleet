@@ -5,12 +5,12 @@ helm:
   chart: rancher-monitoring
   repo: https://charts.rancher.io
   version: 102.0.0+up40.1.2
-  # values:
-  #   # Connect Grafana to Mimir
-  #   grafana:
-  #     sidecar:
-  #       datasources:
-  #         url: http://mimir-nginx.mimir.svc:80/prometheus
+  values:
+    # Connect Grafana to Mimir
+    grafana:
+      sidecar:
+        datasources:
+          url: http://loki-gateway.loki.svc.cluster.local:80
   #   prometheus:
   #     prometheusSpec:
   #       ignoreNamespaceSelectors: true # Use this to limit ServiceMonitors to deployed namespace
