@@ -10,6 +10,9 @@ helm:
       enabled: true
     global:
       dnsService: rke2-coredns-rke2-coredns
+    monitoring:
+      dashboards:
+        namespace: cattle-dashboards
 dependsOn:
   - name: dgiebert-fleet-rancher-monitoring-app
 
