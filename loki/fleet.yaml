@@ -4,10 +4,12 @@ helm:
   releaseName: loki
   chart: loki
   repo: https://grafana.github.io/helm-charts
-  version: 3.3.4
+  version: 5.2.0
   values:
     minio:
       enabled: true
+    global:
+      dnsService: rke2-coredns-rke2-coredns
 dependsOn:
   - name: dgiebert-fleet-rancher-monitoring-app
 
