@@ -22,3 +22,9 @@ diff:
     namespace: loki
     operations:
     - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy"}
+  - apiVersion: apps/v1
+    kind: StatefulSet
+    name: loki-backend
+    namespace: loki
+    operations:
+    - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy"}
