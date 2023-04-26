@@ -1,0 +1,11 @@
+defaultNamespace: chaos-mesh
+
+helm:
+  releaseName: chaos-mesh
+  chart: chaos-mesh
+  repo: https://charts.chaos-mesh.org
+  version: 2.5.2
+  values:
+    chaosDaemon:
+      runtime: containerd
+      socketPath: /run/k3s/containerd/containerd.sock
