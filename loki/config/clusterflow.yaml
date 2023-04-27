@@ -7,4 +7,3 @@ spec:
   globalOutputRefs:
     - loki
   selectors: {}
-
