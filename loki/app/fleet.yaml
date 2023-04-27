@@ -6,6 +6,8 @@ helm:
   repo: https://grafana.github.io/helm-charts
   version: 5.2.0
   values:
+    loki:
+      auth_enabled: false
     minio:
       enabled: true
     global:
