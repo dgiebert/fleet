@@ -8,15 +8,24 @@ helm:
   values:
     # Connect Grafana to Mimir
     grafana:
-      sidecar:
-        datasources:
-          url: http://loki-gateway.loki.svc.cluster.local:80
-  #   prometheus:
-  #     prometheusSpec:
-  #       ignoreNamespaceSelectors: true # Use this to limit ServiceMonitors to deployed namespace
-  #       remoteWrite:
-  #         - url: http://mimir-nginx.mimir.svc:80/api/v1/push
-
+      additionalDataSources:
+      - name: Loki
+        type: loki
+        access: proxy
+        url: http://loki-gateway.loki.svc.cluster.local:80
+    prometheus:
+      prometheusSpec:
+        evaluationInterval: 1m
+        scrapeInterval: 1m
+        retentionSize: 50GiB
+    rke2Proxy:
+      enabled: true
+    rke2ControllerManager:
+      enabled: true
+    rke2IngressNginx:
+      enabled: true
+    rke2Scheduler:
+      enabled: true
 dependsOn:
   - name: dgiebert-fleet-rancher-monitoring-crd
 
