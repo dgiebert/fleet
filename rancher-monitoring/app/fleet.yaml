@@ -18,6 +18,8 @@ helm:
         evaluationInterval: 1m
         scrapeInterval: 1m
         retentionSize: 50GiB
+        externalLabels:
+          cluster: local
       thanosService:
         enabled: true
     rke2Proxy:
