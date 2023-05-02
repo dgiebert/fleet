@@ -9,6 +9,11 @@ helm:
       enabled: True
       metrics:
         port: 8080
+      tracing:
+        jaeger:
+          endpoint: "kubewarden-collector:14250"
+          tls:
+            insecure: true
 dependsOn:
   - name: dgiebert-fleet-cert-manager
   - name: dgiebert-fleet-kubewarden-crds
