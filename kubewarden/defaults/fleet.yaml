@@ -7,7 +7,7 @@ helm:
   values:
     recommendedPolicies:
       enabled: true
-      defaultPolicyMode: "protect"
+      defaultPolicyMode: "monitor"
       skipAdditionalNamespaces:
       - loki
     policyServer:
