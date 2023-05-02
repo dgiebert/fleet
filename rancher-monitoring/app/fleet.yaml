@@ -8,7 +8,6 @@ helm:
   values:
     global:
       cattle:
-        # management.cattle.io/cluster-name
         clusterId: '${ index .ClusterLabels "management.cattle.io/cluster-name" }'
     # Connect Grafana to Mimir
     grafana:
@@ -29,6 +28,8 @@ helm:
     rke2IngressNginx:
       enabled: true
     rke2Scheduler:
+      enabled: true
+    rke2Etcd:
       enabled: true
 dependsOn:
   - name: dgiebert-fleet-rancher-monitoring-crd
