@@ -8,6 +8,8 @@ helm:
     recommendedPolicies:
       enabled: true
       defaultPolicyMode: "protect"
+      skipAdditionalNamespaces:
+      - loki
     policyServer:
       telemetry:
         enabled: true

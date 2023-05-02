@@ -12,9 +12,6 @@ helm:
           endpoint: "kubewarden-collector:14250"
           tls:
             insecure: true
-    recommendedPolicies:
-      skipAdditionalNamespaces:
-      - loki
 dependsOn:
   - name: dgiebert-fleet-cert-manager
   - name: dgiebert-fleet-kubewarden-crds
