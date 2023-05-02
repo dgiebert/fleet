@@ -13,3 +13,4 @@ helm:
         enabled: true
 dependsOn:
   - name: dgiebert-fleet-kubewarden-controller
+  - name: dgiebert-fleet-opentelemetry

@@ -12,3 +12,4 @@ helm:
 dependsOn:
   - name: dgiebert-fleet-cert-manager
   - name: dgiebert-fleet-kubewarden-crds
+  - name: dgiebert-fleet-opentelemetry
