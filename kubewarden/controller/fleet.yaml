@@ -4,7 +4,11 @@ helm:
   chart: kubewarden-controller
   version: 1.5.0
   repo: https://charts.kubewarden.io
-
+  values:
+    telemetry:
+      enabled: True
+      metrics:
+        port: 8080
 dependsOn:
   - name: dgiebert-fleet-cert-manager
   - name: dgiebert-fleet-kubewarden-crds

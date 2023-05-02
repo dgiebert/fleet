@@ -8,5 +8,8 @@ helm:
     recommendedPolicies:
       enabled: true
       defaultPolicyMode: "protect"
+    policyServer:
+      telemetry:
+        enabled: true
 dependsOn:
   - name: dgiebert-fleet-kubewarden-controller
