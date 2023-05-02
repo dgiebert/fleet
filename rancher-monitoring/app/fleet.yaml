@@ -9,7 +9,7 @@ helm:
     global:
       cattle:
         # management.cattle.io/cluster-name
-        clusterId: "${ .ClusterLabels.management.cattle.io/cluster-name }"
+        clusterId: global.fleet.clusterLabels.management.cattle.io.cluster-name
     # Connect Grafana to Mimir
     grafana:
       additionalDataSources:
