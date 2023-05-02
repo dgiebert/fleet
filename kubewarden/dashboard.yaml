@@ -1670,7 +1670,7 @@ data:
       "timepicker": {},
       "timezone": "",
       "title": "Kubewarden",
-      "uid": "r3Pw-1O7z",
+      "uid": "kubewarden-dashboard-policyserver",
       "version": 3
     }
 kind: ConfigMap
