@@ -6,10 +6,11 @@ helm:
   repo: https://charts.rancher.io
   version: 102.0.0+up40.1.2
   values:
+    # Make the UI work 
     global:
       cattle:
         clusterId: '${ index .ClusterLabels "management.cattle.io/cluster-name" }'
-    # Connect Grafana to Mimir
+    # Add Loki Integration
     grafana:
       additionalDataSources:
       - name: Loki
@@ -21,6 +22,7 @@ helm:
         evaluationInterval: 1m
         scrapeInterval: 1m
         retentionSize: 50GiB
+    # RKE2
     rke2Proxy:
       enabled: true
     rke2ControllerManager:
