@@ -6,4 +6,4 @@ helm:
   repo: https://jaegertracing.github.io/helm-charts
   values:
     rbac:
-    clusterRole: true
+      clusterRole: true
