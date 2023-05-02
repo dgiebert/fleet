@@ -6,14 +6,15 @@ helm:
   repo: https://charts.kubewarden.io
   values:
     telemetry:
-      enabled: True
-      metrics:
-        port: 8080
+      enabled: true
       tracing:
         jaeger:
           endpoint: "kubewarden-collector:14250"
           tls:
             insecure: true
+    recommendedPolicies:
+      skipAdditionalNamespaces:
+      - loki
 dependsOn:
   - name: dgiebert-fleet-cert-manager
   - name: dgiebert-fleet-kubewarden-crds
