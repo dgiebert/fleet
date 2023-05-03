@@ -1,0 +1,5 @@
+defaultNamespace: local-path-provisioner
+
+helm:
+  releaseName: local-path-provisioner
+  chart: github.com/rancher/local-path-provisioner.git?ref=v0.0.24//deploy/chart/local-path-provisioner/
