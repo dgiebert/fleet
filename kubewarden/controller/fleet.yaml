@@ -2,7 +2,7 @@ defaultNamespace: kubewarden
 helm:
   releaseName: kubewarden-controller
   chart: kubewarden-controller
-  version: 1.5.1
+  version: 1.5.3
   repo: https://charts.kubewarden.io
   values:
     telemetry:
