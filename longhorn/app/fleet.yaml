@@ -11,13 +11,13 @@ helm:
     defaultSettings:
     defaultDataPath: "/srv/longhorn"
     priorityClass: system-node-critical
-    allowVolumeCreationWithDegradedAvailability: false
+    allowVolumeCreationWithDegradedAvailability: "false"
     concurrentAutomaticEngineUpgradePerNodeLimit: 3
     # Disable Overprovisioning
     storageOverProvisioningPercentage: 100
     storageMinimalAvailablePercentage: 10
     # Disable calls to https://longhorn-upgrade-responder.rancher.io
-    upgradeChecker: false
+    upgradeChecker: "false"
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
