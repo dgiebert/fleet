@@ -8,19 +8,16 @@ helm:
   repo: https://charts.rancher.io
   version: 1002.3.0+up1.5.1
   values:
-    ingress:
-      enabled: true
-      # Wait for: https://github.com/rancher/fleet/pull/671
-      # host: global.fleet.clusterLabels.management.cattle.io.cluster-display-name
-# Fix for sslip.io
-diff:
-  comparePatches:
-  - apiVersion: networking.k8s.io/v1
-    kind: Ingress
-    name: longhorn-ingress
-    namespace: longhorn-system
-    operations:
-    - {"op": "remove", "path": "/spec/rules/0"}
+    defaultSettings:
+    defaultDataPath: "/srv/longhorn"
+    priorityClass: system-node-critical
+    allowVolumeCreationWithDegradedAvailability: false
+    concurrentAutomaticEngineUpgradePerNodeLimit: 3
+    # Disable Overprovisioning
+    storageOverProvisioningPercentage: 100
+    storageMinimalAvailablePercentage: 10
+    # Disable calls to https://longhorn-upgrade-responder.rancher.io
+    upgradeChecker: false
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
