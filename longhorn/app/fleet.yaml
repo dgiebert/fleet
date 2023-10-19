@@ -6,7 +6,7 @@ helm:
   releaseName: longhorn
   chart: longhorn
   repo: https://charts.rancher.io
-  version: 1002.3.0+up1.5.1
+  version: 102.3.0+up1.5.1
   values:
     defaultSettings:
     defaultDataPath: "/srv/longhorn"
