@@ -1,4 +1,8 @@
 defaultNamespace: longhorn-system
+
+labels:
+  app: longhorn-crd
+
 # Custom helm options
 helm:
   releaseName: longhorn-crd

@@ -1,4 +1,8 @@
 defaultNamespace: cattle-logging-system
+
+labels:
+  app: rancher-logging
+
 # Custom helm options
 helm:
   releaseName: rancher-logging
@@ -14,5 +18,9 @@ helm:
         enabled: true
 
 dependsOn:
-  - name: dgiebert-fleet-rancher-logging-crd
-  - name: dgiebert-fleet-rancher-monitoring-crd
+  - selector:
+      matchLabels:
+        app: rancher-monitoring-crd
+  - selector:
+      matchLabels:
+        app: rancher-logging-crd

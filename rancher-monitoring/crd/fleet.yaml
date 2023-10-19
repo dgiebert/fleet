@@ -1,4 +1,6 @@
 defaultNamespace: cattle-monitoring-system
+labels:
+  app: rancher-monitoring-crd
 # Custom helm options
 helm:
   releaseName: rancher-monitoring-crd

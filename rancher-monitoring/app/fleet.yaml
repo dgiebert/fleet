@@ -1,4 +1,6 @@
 defaultNamespace: cattle-monitoring-system
+labels:
+  app: rancher-monitoring
 # Custom helm options
 helm:
   releaseName: rancher-monitoring
@@ -46,8 +48,9 @@ helm:
     k3sProxy:
       enabled: true
 dependsOn:
-  - name: dgiebert-fleet-rancher-monitoring-crd
-
+  - selector:
+      matchLabels:
+        app: rancher-monitoring-crd
 # Patches needed for Fleet
 diff:
   comparePatches:

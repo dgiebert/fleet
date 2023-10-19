@@ -1,4 +1,6 @@
 defaultNamespace: cattle-logging-system
+labels:
+  app: rancher-logging-crd
 # Custom helm options
 helm:
   releaseName: rancher-logging-crd

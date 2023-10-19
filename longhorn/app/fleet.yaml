@@ -1,6 +1,9 @@
 
 defaultNamespace: longhorn-system
 
+labels:
+  app: longhorn
+
 # Custom helm options
 helm:
   releaseName: longhorn
@@ -20,4 +23,6 @@ helm:
       upgradeChecker: false
 
 dependsOn:
-  - name: dgiebert-fleet-longhorn-crd
+  - selector:
+      matchLabels:
+        app: longhorn-crd
