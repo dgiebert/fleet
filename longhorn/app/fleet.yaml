@@ -9,15 +9,15 @@ helm:
   version: 102.3.0+up1.5.1
   values:
     defaultSettings:
-    defaultDataPath: "/srv/longhorn"
-    priorityClass: system-node-critical
-    allowVolumeCreationWithDegradedAvailability: false
-    concurrentAutomaticEngineUpgradePerNodeLimit: 3
-    # Disable Overprovisioning
-    storageOverProvisioningPercentage: 100
-    storageMinimalAvailablePercentage: 10
-    # Disable calls to https://longhorn-upgrade-responder.rancher.io
-    upgradeChecker: false
+      defaultDataPath: "/srv/longhorn"
+      priorityClass: system-node-critical
+      allowVolumeCreationWithDegradedAvailability: false
+      concurrentAutomaticEngineUpgradePerNodeLimit: 3
+      # Disable Overprovisioning
+      storageOverProvisioningPercentage: 100
+      storageMinimalAvailablePercentage: 10
+      # Disable calls to https://longhorn-upgrade-responder.rancher.io
+      upgradeChecker: false
 
 dependsOn:
   - name: dgiebert-fleet-longhorn-crd
