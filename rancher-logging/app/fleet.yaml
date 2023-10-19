@@ -7,8 +7,12 @@ helm:
   version: 102.0.0+up3.17.10
   values:
     additionalLoggingSources:
-      rke2:
+      k3s:
         enabled: false
+    monitoring:
+      serviceMonitor:
+        enabled: true
 
 dependsOn:
   - name: dgiebert-fleet-rancher-logging-crd
+  - name: dgiebert-fleet-rancher-monitoring-crd
