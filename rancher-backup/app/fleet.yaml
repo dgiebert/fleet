@@ -1,0 +1,16 @@
+defaultNamespace: cattle-logging-system
+
+labels:
+  app: rancher-backup
+
+# Custom helm options
+helm:
+  releaseName: rancher-logging
+  chart: rancher-logging
+  repo: https://charts.rancher.io
+  version: 102.0.2+up3.1.2
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: rancher-backup-crd
