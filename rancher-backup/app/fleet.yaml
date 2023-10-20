@@ -5,8 +5,8 @@ labels:
 
 # Custom helm options
 helm:
-  releaseName: rancher-logging
-  chart: rancher-logging
+  releaseName: rancher-backup
+  chart: rancher-backup
   repo: https://charts.rancher.io
   version: 102.0.2+up3.1.2
 
