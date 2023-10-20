@@ -17,3 +17,7 @@ helm:
           cert-manager.io/issuer-kind: ClusterIssuer
         hosts:
           - host: vault.giebert.dev
+        tls:
+          - hosts:
+              - vault.giebert.dev
+            secretName: tls-vault-ingress
