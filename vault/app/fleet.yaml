@@ -1,0 +1,10 @@
+defaultNamespace: kube-system
+labels:
+  app: sealed-secrets
+
+# Custom helm options
+helm:
+  releaseName: sealed-secrets
+  chart: vault
+  repo: https://helm.releases.hashicorp.com
+  version: 0.25.0
