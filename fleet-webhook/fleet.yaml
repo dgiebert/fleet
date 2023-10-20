@@ -1,8 +1,1 @@
 defaultNamespace: cattle-fleet-system
-
-labels:
-  app: fleet-webhook
-
-# Custom helm options
-helm:
-  releaseName: fleet-webhook
