@@ -5,6 +5,7 @@ metadata:
     cert-manager.io/issuer: letsencrypt
     cert-manager.io/issuer-kind: ClusterIssuer
   name: ingress
+  namespace: cattle-fleet-system
 spec:
   ingressClassName: traefik
   rules:
