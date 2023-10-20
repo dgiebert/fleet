@@ -8,3 +8,12 @@ helm:
   chart: vault
   repo: https://helm.releases.hashicorp.com
   version: 0.25.0
+  values:
+    server:
+      ingress:
+        enabled: true
+        annotations:
+          cert-manager.io/issuer: letsencrypt
+          cert-manager.io/issuer-kind: ClusterIssuer
+        hosts:
+          - host: vault.giebert.dev
