@@ -1,22 +1,27 @@
 defaultNamespace: loki
+labels:
+  app: loki
 # Custom helm options
 helm:
   releaseName: loki
   chart: loki
   repo: https://grafana.github.io/helm-charts
-  version: 5.4.0
+  version: 5.35.0
   values:
     loki:
       auth_enabled: false
     minio:
       enabled: true
-    global:
-      dnsService: rke2-coredns-rke2-coredns
     monitoring:
       dashboards:
         namespace: cattle-dashboards
 dependsOn:
-  - name: dgiebert-fleet-rancher-monitoring-app
+  - selector:
+      matchLabels:
+        app: rancher-monitoring-crd
+  - selector:
+      matchLabels:
+        app: longhorn
 
 # Patches needed for Fleet
 diff:
